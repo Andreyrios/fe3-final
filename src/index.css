@@ -25,9 +25,8 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
   padding: 1rem;
+  justify-content: flex-start;
 }
 
 a{
@@ -95,10 +94,10 @@ form{
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse;
     border: 1px solid #ccc;
 
 }
@@ -109,14 +108,11 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
 .dark{
+  color: white;
   background-color: #12121296;
-  color: white;
 }
-.dark > a {
-  color: white;
+.light {
+  color: #999;
+  background-color: #F9F9f9;
 }

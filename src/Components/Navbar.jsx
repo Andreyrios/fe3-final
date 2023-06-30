@@ -3,6 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { ContextGlobal } from './utils/global.context';
 import { ACTIONS } from './utils/actions';
+// Theme
+import theme from '../theme';
+import styles from '../styles/navbar.module.css'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -16,19 +19,33 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={'nav'} style={{background: state.theme === 'light' ? 'red' : 'blue'}}>
-      <ul>
-        <li className={location.pathname === "/" ? "active" : ""}>
-          <Link to="/">Home</Link>
-        </li>
-        <li className={location.pathname === "/contact" ? "active" : ""}>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li className={location.pathname === "/favs" ? "active" : ""}>
-          <Link to="/favs">Favs</Link>
-        </li>
-      </ul>
-      <button onClick={handleThemeChange}>Change theme</button>
+    <nav className={styles.nav} style={theme[state.theme]}>
+      <div>
+        <h1>
+          <span style={{color: '#c50404'}}>D</span>H Odonto
+        </h1>
+
+        <ul>
+          <li className={location.pathname === "/" ? "active" : ""}>
+            <Link style={theme[state.theme]} to="/">Home</Link>
+          </li>
+          <li className={location.pathname === "/contact" ? "active" : ""}>
+            <Link style={theme[state.theme]} to="/contact">Contact</Link>
+          </li>
+          <li className={location.pathname === "/favs" ? "active" : ""}>
+            <Link style={theme[state.theme]} to="/favs">Favs</Link>
+          </li>
+          <li>
+            <button
+              style={state.theme === 'light' ? theme.dark : theme.light }
+              onClick={handleThemeChange}
+              className={styles.buttonTheme}
+            >
+              {state.theme === 'light' ? '🌙' : '🌞'}
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }
