@@ -19,11 +19,11 @@ const Favs = () => {
             return (
               /* Aqui deberias renderizar las cards */
               <Card
-              id={dentist.id}
-              key={dentist.id}
-              name={dentist.name}
-              username={dentist.username}
-              background={foundFavs ? 'red' : 'blue'}
+                id={dentist.id}
+                key={dentist.id}
+                name={dentist.name}
+                foundFavs={foundFavs}
+                username={dentist.username}
               />
             )
           })}

@@ -24,8 +24,8 @@ const Home = () => {
                 id={dentist.id}
                 key={dentist.id}
                 name={dentist.name}
+                foundFavs={foundFavs}
                 username={dentist.username}
-                background={foundFavs ? 'red' : 'blue'}
               />
             )
           })}

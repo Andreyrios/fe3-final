@@ -15,14 +15,12 @@ function App() {
       <Router>
         <div className="App">
           <Navbar />
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/favs" element={<Favs />} />
             <Route path="/destist/:id" element={<Detail />} />
           </Routes>
-
           <Footer />
         </div>
       </Router>
