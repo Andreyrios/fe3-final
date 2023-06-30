@@ -17,9 +17,16 @@ const Home = () => {
       {listDentists.length !== 0 &&
         <div className='card-grid'>
           {listDentists.map(dentist => {
+            const foundFavs = state.favsDentists.find(element => element.id === dentist.id);
             return (
               /* Aqui deberias renderizar las cards */
-              <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} />
+              <Card
+                id={dentist.id}
+                key={dentist.id}
+                name={dentist.name}
+                username={dentist.username}
+                background={foundFavs ? 'red' : 'blue'}
+              />
             )
           })}
         </div>

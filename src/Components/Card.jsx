@@ -1,13 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+// Libraries
 import { Link } from "react-router-dom";
+// Utils
+import { ACTIONS } from "./utils/actions";
+import { ContextGlobal } from "./utils/global.context";
 
-import { ContextProvider } from "./utils/global.context";
+const Card = ({ name, username, id, background }) => {
+  const { dispatch } = useContext(ContextGlobal);
 
-
-const Card = ({ name, username, id }) => {
-
-  const addFav = () => {
+  const addFav = (event) => {
     // Aqui iria la logica para agregar la Card en el localStorage
+    event.preventDefault()
+    const dentistFav = {
+      name, username, id
+    }
+    dispatch({ type: ACTIONS.ADD_DENTIST, payload: { dentistFav } });
   }
 
   return (
@@ -16,11 +23,9 @@ const Card = ({ name, username, id }) => {
       <p>User name: {username}</p>
       <p>ID: {id}</p>
       {/* En cada card deberan mostrar en name - username y el id */}
-
       {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-      <button onClick={()=> addFav()} className="favButton">Add fav</button>
+      <button style={{background: background}} onClick={(e) => addFav(e)} className="favButton">Add fav</button>
     </Link>
   );
 };

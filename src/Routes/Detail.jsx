@@ -12,7 +12,6 @@ const Detail = () => {
 
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   const { id } = useParams();
-  console.log('id', id)
 
   useEffect(() => {
     apiGetdetailDentist()
@@ -21,7 +20,6 @@ const Detail = () => {
   const apiGetdetailDentist = async () => {
     try {
       const dentistDetail = await getDestinstDetail(id);
-      console.log('dentistDetail', JSON.stringify(dentistDetail))
       setDataDentist(dentistDetail)
     } catch (error) {
       console.error('Failed to fetch and set dentist detail', error);

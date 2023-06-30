@@ -27,9 +27,6 @@ const Navbar = () => {
         <li className={location.pathname === "/favs" ? "active" : ""}>
           <Link to="/favs">Favs</Link>
         </li>
-        <li className={location.pathname === "/favs" ? "active" : ""}>
-          <Link to="/destist/10">Dentista</Link>
-        </li>
       </ul>
       <button onClick={handleThemeChange}>Change theme</button>
     </nav>
