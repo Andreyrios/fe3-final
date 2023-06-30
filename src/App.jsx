@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import {ContextProvider} from "./Components/utils/global.context"
+import { ContextProvider } from "./Components/utils/global.context"
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Contact from "./Routes/Contact";
@@ -13,7 +13,7 @@ function App() {
     <ContextProvider>
       <Router>
         <div className="App">
-        <Navbar />
+          <Navbar />
 
           <Routes>
             <Route path="/" element={<Home />} />
@@ -22,10 +22,10 @@ function App() {
             <Route path="/destist/:id" element={<p>hola</p>} />
           </Routes>
 
-        <Footer />
+          <Footer />
         </div>
-    </Router>
-  </ContextProvider>
+      </Router>
+    </ContextProvider>
   );
 }
 
