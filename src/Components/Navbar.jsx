@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={'nav'}>
+    <nav className={'nav'} style={{background: state.theme === 'light' ? 'red' : 'blue'}}>
       <ul>
         <li className={location.pathname === "/" ? "active" : ""}>
           <Link to="/">Home</Link>
