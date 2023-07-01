@@ -44,7 +44,9 @@ const Form = () => {
         <input onChange={(e) => handleChange(e)} value={dataUserForm.email} name="email" placeholder="Email" />
         <input type="submit" value="Send" />
       </form>
-      {showMessage && <p>Gracias {nameToShow}, te contactaremos cuanto antes vía mail</p>}
+      <p style={{height: '20px'}}>
+        {showMessage && `Gracias ${nameToShow}, te contactaremos cuanto antes vía mail`}
+      </p>
     </div>
   );
 };

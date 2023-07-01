@@ -11,7 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
+
+.favButton {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
@@ -19,78 +20,98 @@ code {
   cursor: pointer;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
-nav{
+nav {
   display: flex;
   padding: 1rem;
   justify-content: flex-start;
 }
 
-a{
-  color: #000;
-  text-decoration: none;
+a {
   margin: 5px;
+  color: #000;
   cursor: pointer;
+  text-decoration: none;
 }
-a:hover{
+
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
 
 footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
   bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  justify-content: space-between;
 }
 
-footer > img{
+footer>div>img {
   width: 200px;
   margin: 0;
 }
-footer > p{
+
+footer>div>p {
   margin: 0;
   padding-top: 0.7rem;
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+form {
   width: 300px;
   height: 100px;
+  display: flex;
   margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.card{
+input {
+  outline: none;
+  padding: 3px 7px;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+}
+
+.card {
+  width: 20%;
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  padding: 0.5rem;
+  min-width: 200px;
+  text-align: center;
+  border-radius: 3px;
   align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
   border: 0.5px solid rgb(136, 136, 136);
 }
 
-.card:hover{
+.card>img {
+  width: 100%;
+} 
+
+.card:hover {
+  opacity: .8;
   border: 0.5px solid rgb(206, 217, 142);
 }
 
-.card-grid{
-  display: flex;
-  justify-content: space-evenly;
+.card-grid {
   gap: 1rem;
-  width: 90vw;
+  width: 80vw;
   height: auto;
-  flex-wrap: wrap;
+  display: flex;
   margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.favButton {
+  border-radius: 3px;
 }
 
 table {
@@ -98,21 +119,27 @@ table {
   display: table;
   border-spacing: 0;
   border-collapse: collapse;
-    border: 1px solid #ccc;
-
+  border: 1px solid #ccc;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
 
-.dark{
-  color: white;
-  background-color: #12121296;
+.main {
+  padding-bottom: 1rem;
 }
-.light {
-  color: #999;
-  background-color: #F9F9f9;
+
+.main>h1,
+.main>h2 {
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.containerNetworks>a>img {
+  width: 30px;
+  margin: 1rem;
 }

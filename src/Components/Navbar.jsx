@@ -21,9 +21,11 @@ const Navbar = () => {
   return (
     <nav className={styles.nav} style={theme[state.theme]}>
       <div>
-        <h1>
-          <span style={{color: '#c50404'}}>D</span>H Odonto
-        </h1>
+        <Link to="/" style={theme[state.theme]}>
+          <h1>
+            <span style={{ color: '#c50404' }}>D</span>H Odonto
+          </h1>
+        </Link>
 
         <ul>
           <li className={location.pathname === "/" ? "active" : ""}>
@@ -37,7 +39,7 @@ const Navbar = () => {
           </li>
           <li>
             <button
-              style={state.theme === 'light' ? theme.dark : theme.light }
+              style={state.theme === 'light' ? theme.dark : theme.light}
               onClick={handleThemeChange}
               className={styles.buttonTheme}
             >
